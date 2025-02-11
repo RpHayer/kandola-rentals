@@ -1,21 +1,26 @@
+/* app/globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --primary: #4d7c0f; /* Dark Green */
+  --secondary: #d3dedc; /* Light Gray */
+  --accent: #468b97; /* Teal */
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Button Styles */
+@layer components {
+  .btn-primary {
+    @apply bg-[var(--primary)] hover:bg-orange-600 text-white font-bold py-2 px-4 rounded; /* Use bg-[var(--primary)] */
+  }
+
+  .btn-secondary {
+    @apply bg-[var(--secondary)] hover:bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded;
+  }
 }
