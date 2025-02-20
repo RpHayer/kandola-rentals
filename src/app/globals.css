@@ -4,23 +4,23 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary: #4d7c0f; /* Dark Green */
-  --secondary: #d3dedc; /* Light Gray */
-  --accent: #468b97; /* Teal */
-}
-
+html,
 body {
-  font-family: "Roboto", sans-serif;
+  background-color: #1c1c1c; /* Replace with your site's main background color */
+  overflow-x: hidden;
+  overscroll-behavior: none; /* Prevents bounce/overscroll */
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* Button Styles */
 @layer components {
   .btn-primary {
-    @apply bg-[var(--primary)] hover:bg-orange-600 text-white font-bold py-2 px-4 rounded; /* Use bg-[var(--primary)] */
+    @apply bg-primary hover:bg-accent text-white font-bold py-2 px-4 rounded;
   }
 
   .btn-secondary {
-    @apply bg-[var(--secondary)] hover:bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded;
+    @apply bg-secondary hover:bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded;
   }
 }
