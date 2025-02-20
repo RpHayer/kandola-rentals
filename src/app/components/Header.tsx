@@ -1,57 +1,118 @@
-// components/Header.tsx
-
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const navLinks = [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Trailer Details', href: '/trailer' },
+    { label: 'Contact', href: '/contact' },
+  ];
+
   return (
-    <header style={{ backgroundColor: 'var(--primary)' }} className="py-4 relative z-20">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between">
-        <div className="text-white text-2xl font-bold">Kandola Rentals</div>
-
-        <button className="text-white md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          <svg
-            className="h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d={isMenuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16m-7 6h7'}
+    <header className="relative bg-black text-white w-full py-4">
+      {/* Desktop Header */}
+      <div className="hidden md:flex items-center justify-between px-4">
+        {/* Left: Logo + Brand Name */}
+        <div className="flex items-center space-x-3">
+          <div className="relative w-10 h-10">
+            <Image
+              src="/logos/k.png" // Replace with your "K" logo path
+              alt="KanPacific Logo"
+              fill
+              style={{ objectFit: 'contain' }}
+              priority
             />
-          </svg>
-        </button>
-
-        <nav
-          className={`${isMenuOpen ? 'max-h-screen' : 'max-h-0'
-            } overflow-hidden transition-all duration-300 ease-in-out md:max-h-screen md:overflow-visible md:block absolute md:static top-16 md:top-auto left-0 w-full md:w-auto bg-primary md:bg-transparent py-4 md:py-0 z-10`}
-        >
-          <ul className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
-            <li>
-              <a href="#" className="text-white hover:text-gray-300">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-white hover:text-gray-300">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-white hover:text-gray-300">
-                Contact
-              </a>
-            </li>
-          </ul>
+          </div>
+          <span
+            className="text-3xl leading-none tracking-wide"
+            style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}
+          >
+            <span className="uppercase font-bold text-white">KAN</span>
+            <span className="uppercase font-light text-white">PACIFIC</span>
+            <span className="uppercase font-light text-red-500 ml-2">EQUIPMENT</span>
+            <span className="uppercase font-light text-red-500 ml-1 text-sm">LTD.</span>
+          </span>
+        </div>
+        {/* Right: Desktop Navigation */}
+        <nav className="flex space-x-6">
+          {navLinks.map(({ label, href }) => (
+            <Link
+              key={label}
+              href={href}
+              className="relative group text-lg font-light tracking-wider uppercase transition-colors hover:text-red-500"
+              style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.6)' }}
+            >
+              {label}
+              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full" />
+            </Link>
+          ))}
         </nav>
       </div>
+
+      {/* Mobile Header */}
+      <div className="flex md:hidden items-center justify-center px-4">
+        {/* Centered Logo */}
+        <div className="relative w-10 h-10">
+          <Image
+            src="/logos/k.png" // Replace with your logo path
+            alt="KanPacific Logo"
+            fill
+            style={{ objectFit: 'contain' }}
+            priority
+          />
+        </div>
+        {/* Burger Menu Button (positioned on the right) */}
+        <button
+          className="absolute right-4 text-white focus:outline-none"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor">
+            {isMenuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            )}
+          </svg>
+        </button>
+      </div>
+
+      {/* Mobile Navigation Overlay */}
+      {isMenuOpen && (
+        <nav className="absolute top-full left-0 w-full bg-black text-white px-4 pt-2 pb-4 z-50">
+          <ul className="flex flex-col items-center space-y-2">
+            {navLinks.map(({ label, href }) => (
+              <li key={label}>
+                <Link
+                  href={href}
+                  className="relative group block py-1 text-lg font-light tracking-wider uppercase transition-colors hover:text-red-500"
+                  style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.6)' }}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {label}
+                  <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </header>
   );
 }
