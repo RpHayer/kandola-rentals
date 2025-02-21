@@ -34,7 +34,7 @@ export default function Contact() {
           {/* Left: Contact Information */}
           <div className="space-y-6">
             <p className="text-lg">
-              We'd love to hear from you! Fill out the form or email us directly at{' '}
+              We&apos;d love to hear from you! Fill out the form or email us directly at{' '}
               <a
                 href="mailto:info@example.com"
                 className="text-brand-accent hover:underline"
