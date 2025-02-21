@@ -31,13 +31,13 @@ export default function TrailerDetails() {
             <strong>Capacity:</strong> 17,000 lbs
           </p>
           <p className="text-lg leading-relaxed">
-            <strong>Dimensions:</strong> 7' x 14'
+            <strong>Dimensions:</strong> 7&apos; x 14&apos;
           </p>
           <p className="text-lg leading-relaxed">
-            <strong>Features:</strong> Dump trailer with integrated tarp system and ramps for easy loading and unloading. Built for durability, it's ideal for construction and waste disposal projects.
+            <strong>Features:</strong> Dump trailer with integrated tarp system and ramps for easy loading and unloading. Built for durability, it&apos;s ideal for construction and waste disposal projects.
           </p>
           <p className="text-lg leading-relaxed">
-            The New Southland Trailers 7x14 Dump Trailer is engineered to deliver exceptional performance. Whether you're tackling a construction project or managing waste disposal, this trailer is designed to handle the toughest jobs with ease.
+            The New Southland Trailers 7x14 Dump Trailer is engineered to deliver exceptional performance. Whether you&apos;re tackling a construction project or managing waste disposal, this trailer is designed to handle the toughest jobs with ease.
           </p>
         </div>
       </div>

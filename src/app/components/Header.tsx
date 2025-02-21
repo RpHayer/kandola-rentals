@@ -23,7 +23,7 @@ export default function Header() {
           <div className="relative w-10 h-10">
             <Image
               src="/logos/k.png" // Replace with your "K" logo path
-              alt="KanPacific Logo"
+              alt="Kan Pacific Logo"
               fill
               style={{ objectFit: 'contain' }}
               priority
@@ -61,7 +61,7 @@ export default function Header() {
         <div className="relative w-10 h-10">
           <Image
             src="/logos/k.png" // Replace with your logo path
-            alt="KanPacific Logo"
+            alt="Kan Pacific Logo"
             fill
             style={{ objectFit: 'contain' }}
             priority

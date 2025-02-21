@@ -12,7 +12,7 @@ export default function About() {
           <div className="relative w-32 h-32 rounded-full overflow-hidden">
             <Image
               src="/logos/kanpacific-circle.png" // Replace with your actual logo path
-              alt="KanPacific Equipment Logo"
+              alt="Kan Pacific Equipment Logo"
               fill
               style={{ objectFit: 'contain' }}
               priority
@@ -22,7 +22,7 @@ export default function About() {
 
 
         <h1 className="text-3xl sm:text-4xl font-bold uppercase text-center mb-8">
-          About KANPACIFIC EQUIPMENT LTD.
+          About KAN PACIFIC EQUIPMENT LTD.
         </h1>
 
 
@@ -30,7 +30,7 @@ export default function About() {
           {/* Our Story */}
           <section className="space-y-4">
             <p className="text-lg leading-relaxed">
-              At <strong>KANPACIFIC EQUIPMENT LTD.</strong>, we’re not just a business—we’re family.
+              At <strong>KAN PACIFIC EQUIPMENT LTD.</strong>, we’re not just a business—we’re family.
               Founded by brothers <strong>Binay Kandola</strong> and <strong>Gunvir Kandola</strong> in Langley,
               our passion for hard work and honesty drives us to deliver reliable equipment solutions.
             </p>

@@ -1,4 +1,3 @@
-import Header from './components/Header';
 import Hero from './components/Hero';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -33,7 +32,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-4">Specifications</h3>
               <ul className="list-disc list-inside text-lg space-y-2">
                 <li>
-                  <strong>Dimensions:</strong> 7' x 14'
+                  <strong>Dimensions:</strong> 7&apos; x 14&apos;
                 </li>
                 <li>
                   <strong>Weight Capacity:</strong> 10,000 lbs
