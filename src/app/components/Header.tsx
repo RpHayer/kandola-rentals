@@ -34,7 +34,7 @@ export default function Header() {
             style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}
           >
             <span className="uppercase font-bold text-white">KAN</span>
-            <span className="uppercase font-light text-white">PACIFIC</span>
+            <span className="uppercase font-light text-white ml-1.5">PACIFIC</span>
             <span className="uppercase font-light text-red-500 ml-2">EQUIPMENT</span>
             <span className="uppercase font-light text-red-500 ml-1 text-sm">LTD.</span>
           </span>
