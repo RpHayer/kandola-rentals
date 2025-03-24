@@ -1,7 +1,7 @@
-// app/contact/page.tsx or src/pages/Contact.tsx (depending on your Next.js setup)
 'use client';
 
 import React, { useState } from 'react';
+import InstagramLink from '../components/InstagramLink';
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -31,7 +31,7 @@ export default function Contact() {
           Contact Us
         </h1>
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Left: Contact Information */}
+          {/* Left: Contact Information + Map */}
           <div className="space-y-6">
             <p className="text-lg">
               We&apos;d love to hear from you! Fill out the form or email us directly at{' '}
@@ -39,16 +39,39 @@ export default function Contact() {
                 href="mailto:info@example.com"
                 className="text-brand-accent hover:underline"
               >
-                info@example.com
+                info@kanpacificequip.com
               </a>.
             </p>
             <div>
-              <h2 className="text-2xl font-semibold mb-2 uppercase">
-                Our Office
-              </h2>
-              <p>1234 Street Name</p>
-              <p>City, State, ZIP</p>
-              <p>Phone: (123) 456-7890</p>
+              <h2 className="text-2xl font-semibold uppercase mb-4">Our Office</h2>
+              <p className="text-lg mb-2">Langley Township, BC</p>
+              <a
+                href="tel:6048898176"
+                className="text-lg flex items-center justify-start whitespace-nowrap"
+              >
+                <span className="mr-2 text-xl">&#9742;</span>
+                (604) 889-8176
+              </a>
+              <a
+                href="tel:6043660073"
+                className="text-lg flex items-center justify-start whitespace-nowrap"
+              >
+                <span className="mr-2 text-xl">&#9742;</span>
+                (604) 366-0073
+              </a>
+              <InstagramLink largeSize />
+            </div>
+
+            {/* Map Embed */}
+            <div>
+              <h2 className="text-2xl font-semibold uppercase mb-2">Our Location</h2>
+              <iframe
+                className="w-full h-64 rounded-lg"
+                src="https://maps.google.com/maps?q=49.031201,-122.636252&z=12&output=embed"
+                allowFullScreen
+                loading="lazy"
+                title="Map Location"
+              />
             </div>
           </div>
           {/* Right: Contact Form */}
@@ -109,7 +132,7 @@ export default function Contact() {
                   placeholder="Your Message"
                   rows={5}
                   className="w-full border border-gray-300 rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-brand-accent"
-                ></textarea>
+                />
               </div>
               <div className="flex justify-end">
                 <button
