@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import React, { useState } from 'react';
-import RentNowModal from '../components/RentalNowModal';
+import Link from 'next/link';
 
 export default function TrailerDetails() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -37,12 +37,13 @@ export default function TrailerDetails() {
               <p className="text-lg">
                 The Southland SL714-14K Dump Trailer is designed for superior strength and efficiency, making it the ideal choice for construction, landscaping, and waste disposal projects. Engineered to handle heavy loads with ease, it ensures reliability and high performance when you need it most.
               </p>
-              <button
-                onClick={() => setModalOpen(true)}
-                className="self-center bg-brand-accent hover:bg-brand-accentDark text-white font-bold py-2 px-4 rounded transition-all duration-300 w-full"
+
+              <Link
+                href="/book"
+                className="flex justify-center bg-brand-accent hover:bg-brand-accentDark text-white font-bold py-2 px-4 rounded transition-all duration-300 w-full"
               >
                 Book Now
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -52,51 +53,6 @@ export default function TrailerDetails() {
         <div className="flex flex-col md:flex-row md:space-x-8">
           {/* Left Column: Specifications Table */}
           <div className="md:w-1/2 mb-8 md:mb-0">
-            <div className="overflow-x-auto">
-              <table className="w-full bg-brand-secondary rounded-xl shadow-md">
-                <tbody className="text-lg">
-                  <tr className="border-b border-gray-300">
-                    <th className="p-4 font-bold text-left">Year:</th>
-                    <td className="p-4 text-left">2025</td>
-                  </tr>
-                  <tr className="border-b border-gray-300">
-                    <th className="p-4 font-bold text-left">Manufacturer:</th>
-                    <td className="p-4 text-left">SOUTHLAND TRAILERS</td>
-                  </tr>
-                  <tr className="border-b border-gray-300">
-                    <th className="p-4 font-bold text-left">Model:</th>
-                    <td className="p-4 text-left">SL714-14K</td>
-                  </tr>
-                  <tr className="border-b border-gray-300">
-                    <th className="p-4 font-bold text-left">Length:</th>
-                    <td className="p-4 text-left">14ft</td>
-                  </tr>
-                  <tr className="border-b border-gray-300">
-                    <th className="p-4 font-bold text-left">Width:</th>
-                    <td className="p-4 text-left">7ft</td>
-                  </tr>
-                  <tr className="border-b border-gray-300">
-                    <th className="p-4 font-bold text-left">Height:</th>
-                    <td className="p-4 text-left">24in</td>
-                  </tr>
-                  <tr className="border-b border-gray-300">
-                    <th className="p-4 font-bold text-left">Payload Capacity:</th>
-                    <td className="p-4 text-left">12308 lbs</td>
-                  </tr>
-                  <tr className="border-b border-gray-300">
-                    <th className="p-4 font-bold text-left">Weight:</th>
-                    <td className="p-4 text-left">3124 lbs</td>
-                  </tr>
-                  <tr>
-                    <th className="p-4 font-bold text-left">Axle Capacity:</th>
-                    <td className="p-4 text-left">2 X 7000 lbs</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          {/* Right Column: Key Features */}
-          <div className="md:w-1/2">
             <div className="p-6 bg-brand-secondary rounded-xl shadow-md">
               <h2 className="text-2xl font-bold uppercase mb-6">Key Features</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -169,10 +125,54 @@ export default function TrailerDetails() {
               </div>
             </div>
           </div>
+          {/* Right Column: Key Features */}
+          <div className="md:w-1/2">
+            <div className="overflow-x-auto">
+              <table className="w-full bg-brand-secondary rounded-xl shadow-md">
+                <tbody className="text-lg">
+                  <tr className="border-b border-gray-300">
+                    <th className="p-4 font-bold text-left">Year:</th>
+                    <td className="p-4 text-left">2025</td>
+                  </tr>
+                  <tr className="border-b border-gray-300">
+                    <th className="p-4 font-bold text-left">Manufacturer:</th>
+                    <td className="p-4 text-left">SOUTHLAND TRAILERS</td>
+                  </tr>
+                  <tr className="border-b border-gray-300">
+                    <th className="p-4 font-bold text-left">Model:</th>
+                    <td className="p-4 text-left">SL714-14K</td>
+                  </tr>
+                  <tr className="border-b border-gray-300">
+                    <th className="p-4 font-bold text-left">Length:</th>
+                    <td className="p-4 text-left">14ft</td>
+                  </tr>
+                  <tr className="border-b border-gray-300">
+                    <th className="p-4 font-bold text-left">Width:</th>
+                    <td className="p-4 text-left">7ft</td>
+                  </tr>
+                  <tr className="border-b border-gray-300">
+                    <th className="p-4 font-bold text-left">Height:</th>
+                    <td className="p-4 text-left">24in</td>
+                  </tr>
+                  <tr className="border-b border-gray-300">
+                    <th className="p-4 font-bold text-left">Payload Capacity:</th>
+                    <td className="p-4 text-left">12308 lbs</td>
+                  </tr>
+                  <tr className="border-b border-gray-300">
+                    <th className="p-4 font-bold text-left">Weight:</th>
+                    <td className="p-4 text-left">3124 lbs</td>
+                  </tr>
+                  <tr>
+                    <th className="p-4 font-bold text-left">Axle Capacity:</th>
+                    <td className="p-4 text-left">2 X 7000 lbs</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
         </div>
       </div>
-      {/* Modal Form */}
-      <RentNowModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
     </main>
   );
 }
