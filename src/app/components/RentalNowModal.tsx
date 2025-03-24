@@ -28,8 +28,9 @@ export default function RentNowModal({ isOpen, onClose }: RentNowModalProps) {
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value, type } = e.target;
     if (type === 'checkbox') {
+      const { checked } = e.target as HTMLInputElement;
       setForm((prev) => ({
         ...prev,
         options: {
@@ -182,9 +183,9 @@ export default function RentNowModal({ isOpen, onClose }: RentNowModalProps) {
               className="w-full border border-gray-300 rounded-md shadow-sm p-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-red-500"
             >
               <option value="">Select a Service</option>
-              <option value="drop-off">Drop Off</option>
-              <option value="pick-up">Pick Up</option>
-              <option value="both">Both</option>
+              <option value="trailer-rental">Trailer rental</option>
+              <option value="waste-disposal">Waste disposal</option>
+              <option value="material-handling">Material handling</option>
             </select>
           </div>
           {/* Options Checkboxes */}

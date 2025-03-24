@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import InstagramLink from '../components/InstagramLink';
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -44,25 +45,23 @@ export default function Contact() {
             <div>
               <h2 className="text-2xl font-semibold uppercase mb-4">Our Office</h2>
               <p className="text-lg mb-2">Langley Township, BC</p>
-              <div className="flex flex-column items-center gap-4">
-                <a
-                  href="tel:6048898176"
-                  className="text-lg flex items-center justify-center whitespace-nowrap"
-                >
-                  <span className="mr-2 text-xl">&#9742;</span>
-                  (604) 889-8176
-                </a>
-                <a
-                  href="tel:6043660073"
-                  className="text-lg flex items-center justify-center whitespace-nowrap"
-                >
-                  <span className="mr-2 text-xl">&#9742;</span>
-                  (604) 366-0073
-                </a>
-              </div>
-
-
+              <a
+                href="tel:6048898176"
+                className="text-lg flex items-center justify-start whitespace-nowrap"
+              >
+                <span className="mr-2 text-xl">&#9742;</span>
+                (604) 889-8176
+              </a>
+              <a
+                href="tel:6043660073"
+                className="text-lg flex items-center justify-start whitespace-nowrap"
+              >
+                <span className="mr-2 text-xl">&#9742;</span>
+                (604) 366-0073
+              </a>
+              <InstagramLink largeSize />
             </div>
+
             {/* Map Embed */}
             <div>
               <h2 className="text-2xl font-semibold uppercase mb-2">Our Location</h2>
@@ -72,8 +71,7 @@ export default function Contact() {
                 allowFullScreen
                 loading="lazy"
                 title="Map Location"
-              ></iframe>
-
+              />
             </div>
           </div>
           {/* Right: Contact Form */}
@@ -134,7 +132,7 @@ export default function Contact() {
                   placeholder="Your Message"
                   rows={5}
                   className="w-full border border-gray-300 rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-brand-accent"
-                ></textarea>
+                />
               </div>
               <div className="flex justify-end">
                 <button
