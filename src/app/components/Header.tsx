@@ -9,17 +9,17 @@ export default function Header() {
 
   const navLinks = [
     { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
     { label: 'Trailer Details', href: '/trailer' },
     { label: 'Contact', href: '/contact' },
+    { label: 'About', href: '/about' },
   ];
 
   return (
-    <header className="relative bg-black text-white w-full py-4">
+    <header className="sticky top-0 z-50 bg-black text-white w-full py-4">
       {/* Desktop Header */}
       <div className="hidden md:flex items-center justify-between px-4">
-        {/* Left: Logo + Brand Name */}
-        <div className="flex items-center space-x-3">
+        {/* Left: Logo + Brand Name wrapped in Link */}
+        <Link href="/" className="flex items-center space-x-3 cursor-pointer">
           <div className="relative w-10 h-10">
             <Image
               src="/logos/k.png" // Replace with your "K" logo path
@@ -38,7 +38,7 @@ export default function Header() {
             <span className="uppercase font-light text-red-500 ml-2">EQUIPMENT</span>
             <span className="uppercase font-light text-red-500 ml-1 text-sm">LTD.</span>
           </span>
-        </div>
+        </Link>
         {/* Right: Desktop Navigation */}
         <nav className="flex space-x-6">
           {navLinks.map(({ label, href }) => (
@@ -56,9 +56,9 @@ export default function Header() {
       </div>
 
       {/* Mobile Header */}
-      <div className="flex md:hidden items-center justify-center px-4">
-        {/* Centered Logo */}
-        <div className="relative w-10 h-10">
+      <div className="flex md:hidden items-center justify-center px-4 relative">
+        {/* Centered Logo wrapped in Link */}
+        <Link href="/" className="relative w-10 h-10 cursor-pointer">
           <Image
             src="/logos/k.png" // Replace with your logo path
             alt="Kan Pacific Logo"
@@ -66,7 +66,7 @@ export default function Header() {
             style={{ objectFit: 'contain' }}
             priority
           />
-        </div>
+        </Link>
         {/* Burger Menu Button (positioned on the right) */}
         <button
           className="absolute right-4 text-white focus:outline-none"
