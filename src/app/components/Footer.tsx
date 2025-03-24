@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import InstagramLink from './InstagramLink';
 
 export default function Footer() {

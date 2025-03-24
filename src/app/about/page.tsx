@@ -11,7 +11,7 @@ export default function About() {
         <div className="flex justify-center mb-8">
           <div className="relative w-32 h-32 rounded-full overflow-hidden">
             <Image
-              src="/logos/kanpacific-circle.png" // Replace with your actual logo path
+              src="/logos/kanpacific-circle.png"
               alt="Kan Pacific Equipment Logo"
               fill
               style={{ objectFit: 'contain' }}
@@ -20,20 +20,18 @@ export default function About() {
           </div>
         </div>
 
-
         <h1 className="text-3xl sm:text-4xl font-bold uppercase text-center mb-8">
           About KAN PACIFIC EQUIPMENT LTD.
         </h1>
-
 
         {/* About Content */}
         <div className="max-w-3xl mx-auto space-y-8 text-lg leading-relaxed">
           {/* Company Story */}
           <section>
             <p>
-              At <strong>KAN PACIFIC EQUIPMENT LTD.</strong>, we’re more than just a business—we’re family.
+              At <strong>KAN PACIFIC EQUIPMENT LTD.</strong>, we&rsquo;re more than just a business&mdash;we&rsquo;re family.
               Founded by two brothers in Langley, our commitment to excellence, sustainability, and integrity makes us a standout choice for businesses in need of reliable equipment and support.
-              Whether it's trailer rentals, waste disposal, or expert material handling services, we provide the tools and expertise to help you get the job done right.
+              Whether it&apos;s trailer rentals, waste disposal, or expert material handling services, we provide the tools and expertise to help you get the job done right.
             </p>
           </section>
 
@@ -83,12 +81,12 @@ export default function About() {
           {/* Conclusion */}
           <section>
             <p>
-              Proudly rooted in the Langley community, we’re committed to making a difference through exceptional service and by building a network of trust and support.
-              Let’s work together to create lasting success!
+              Proudly rooted in the Langley community, we&rsquo;re committed to making a difference through exceptional service and by building a network of trust and support.
+              Let&rsquo;s work together to create lasting success!
             </p>
           </section>
         </div>
       </div>
-    </main >
+    </main>
   );
 }

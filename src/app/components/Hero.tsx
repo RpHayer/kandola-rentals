@@ -1,13 +1,10 @@
-// components/Hero.tsx
 'use client';
 
 import Image from 'next/image';
-import React, { useState } from 'react';
-import RentNowModal from './RentalNowModal';
+import React from 'react';
 import Link from 'next/link';
 
 export default function Hero() {
-
   return (
     <section className="relative w-full h-screen flex items-center justify-center text-center text-brand-text px-6 sm:px-12">
       {/* Background Image */}
@@ -30,7 +27,8 @@ export default function Hero() {
           Trailer Rentals
         </h1>
         <p className="text-lg sm:text-xl font-medium drop-shadow-md">
-          Need Reliable Construction Trailers? We've got you covered!        </p>
+          Need Reliable Construction Trailers? We&rsquo;ve got you covered!
+        </p>
         <div>
           <Link
             href="/trailer"
