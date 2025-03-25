@@ -9,7 +9,6 @@ export default function Footer() {
         <p className="text-sm mb-2">
           &copy; {new Date().getFullYear()} KAN PACIFIC EQUIPMENT LTD.
         </p>
-        <p className="text-sm mb-2">Langley Township, BC</p>
         <p className="text-sm mb-2">
           Email:{' '}
           <a

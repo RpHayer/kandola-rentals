@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import Link from 'next/link';
+import ImageCarousel from '../components/ImageCarousel';
 
 export default function TrailerDetails() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -20,17 +21,7 @@ export default function TrailerDetails() {
         {/* Top Section: Trailer Image & Description */}
         <div className="flex flex-col md:flex-row md:items-stretch md:space-x-8 mb-12">
           {/* Left Column: Trailer Image */}
-          <div className="md:w-2/3 mb-8 md:mb-0">
-            <div className="relative w-full h-96 rounded-3xl overflow-hidden shadow-xl">
-              <Image
-                src="/images/hero-trailer.jpg" // Uses the image from your public folder
-                alt="Southland 7X14 Dump Trailer with Tarp and Ramps"
-                fill
-                style={{ objectFit: 'cover' }}
-                priority
-              />
-            </div>
-          </div>
+          <ImageCarousel />
           {/* Right Column: Trailer Description & Book Now Button */}
           <div className="md:w-1/3">
             <div className="flex flex-col justify-between h-full p-6 bg-brand-secondary rounded-xl shadow-md gap-3">
@@ -42,7 +33,7 @@ export default function TrailerDetails() {
                 href="/book"
                 className="flex justify-center bg-brand-accent hover:bg-brand-accentDark text-white font-bold py-2 px-4 rounded transition-all duration-300 w-full"
               >
-                Book Now
+                Rent Now
               </Link>
             </div>
           </div>

@@ -12,12 +12,25 @@ export default function Home() {
         <p className="mb-6">
           Contact us today to check availability and book your trailer.
         </p>
-        <Link
-          href="/contact"
-          className="inline-block bg-brand-accent hover:bg-brand-accentDark text-white font-bold py-2 px-4 rounded transition-all duration-300"
-        >
-          Contact Us
-        </Link>
+
+        {/* Rent Now Button */}
+        <div className="flex gap-4 justify-center">
+          <Link
+            href="/book"
+            className="inline-block bg-brand-accent hover:bg-brand-accentDark text-white font-bold py-2 px-4 rounded transition-all duration-300"
+          >
+            Rent Now
+          </Link>
+
+
+          {/* Contact Us Button */}
+          <Link
+            href="/contact"
+            className="inline-block bg-brand-accent hover:bg-brand-accentDark text-white font-bold py-2 px-4 rounded transition-all duration-300"
+          >
+            Contact Us
+          </Link>
+        </div>
       </section>
     </main>
   );

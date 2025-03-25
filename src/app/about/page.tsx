@@ -29,7 +29,7 @@ export default function About() {
           {/* Company Story */}
           <section>
             <p>
-              At <strong>KAN PACIFIC EQUIPMENT LTD.</strong>, we&rsquo;re more than just a business&mdash;we&rsquo;re family.
+              At <strong>KAN PACIFIC EQUIPMENT LTD.</strong>, we are more than just a business&mdash;we are family.
               Founded by two brothers in Langley, our commitment to excellence, sustainability, and integrity makes us a standout choice for businesses in need of reliable equipment and support.
               Whether it&apos;s trailer rentals, waste disposal, or expert material handling services, we provide the tools and expertise to help you get the job done right.
             </p>
@@ -81,7 +81,7 @@ export default function About() {
           {/* Conclusion */}
           <section>
             <p>
-              Proudly rooted in the Langley community, we&rsquo;re committed to making a difference through exceptional service and by building a network of trust and support.
+              Proudly rooted in the Langley community, we are committed to making a difference through exceptional service and by building a network of trust and support.
               Let&rsquo;s work together to create lasting success!
             </p>
           </section>

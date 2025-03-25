@@ -8,10 +8,10 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: 'Home', href: '/' },
     { label: 'Trailer Details', href: '/trailer' },
     { label: 'Contact', href: '/contact' },
     { label: 'About', href: '/about' },
+    { label: 'Rent Now', href: '/book' },
   ];
 
   return (
@@ -40,19 +40,26 @@ export default function Header() {
           </span>
         </Link>
         {/* Right: Desktop Navigation */}
-        <nav className="flex space-x-6">
+        {/* Right: Desktop Navigation */}
+        <nav className="flex space-x-6 items-center">
           {navLinks.map(({ label, href }) => (
             <Link
               key={label}
               href={href}
-              className="relative group text-lg font-light tracking-wider uppercase transition-colors hover:text-red-500"
-              style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.6)' }}
+              className={`relative group text-lg tracking-wider uppercase transition-all duration-300 ${label === 'Rent Now'
+                ? 'text-red-500 border border-red-500 px-3 py-1 rounded hover:bg-red-500 hover:text-white font-semibold'
+                : 'font-light hover:text-red-500'
+                }`}
+              style={{ textShadow: label !== 'Rent Now' ? '1px 1px 3px rgba(0,0,0,0.6)' : undefined }}
             >
               {label}
-              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full" />
+              {label !== 'Rent Now' && (
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full" />
+              )}
             </Link>
           ))}
         </nav>
+
       </div>
 
       {/* Mobile Header */}
