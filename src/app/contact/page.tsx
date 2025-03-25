@@ -44,7 +44,7 @@ export default function Contact() {
             </p>
             <div>
               <h2 className="text-2xl font-semibold uppercase mb-4">Our Office</h2>
-              <p className="text-lg mb-2">Langley Township, BC</p>
+              <p className="text-lg mb-2">Langley, BC</p>
               <a
                 href="tel:6048898176"
                 className="text-lg flex items-center justify-start whitespace-nowrap"
@@ -62,17 +62,6 @@ export default function Contact() {
               <InstagramLink largeSize />
             </div>
 
-            {/* Map Embed */}
-            <div>
-              <h2 className="text-2xl font-semibold uppercase mb-2">Our Location</h2>
-              <iframe
-                className="w-full h-64 rounded-lg"
-                src="https://maps.google.com/maps?q=49.031201,-122.636252&z=12&output=embed"
-                allowFullScreen
-                loading="lazy"
-                title="Map Location"
-              />
-            </div>
           </div>
           {/* Right: Contact Form */}
           <div>
