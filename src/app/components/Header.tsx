@@ -8,9 +8,9 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: 'Trailer Details', href: '/trailer' },
-    { label: 'Contact', href: '/contact' },
     { label: 'About', href: '/about' },
+    { label: 'Trailers', href: '/trailer' },
+    { label: 'Contact', href: '/contact' },
     { label: 'Rent Now', href: '/book' },
   ];
 
