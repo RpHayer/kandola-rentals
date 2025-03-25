@@ -24,12 +24,13 @@ const eslintConfig = [
       },
     },
     plugins: {
-      "unused-imports": require("eslint-plugin-unused-imports"),
-      react: require("eslint-plugin-react"),
+      "unused-imports": (await import("eslint-plugin-unused-imports")).default,
+      react: (await import("eslint-plugin-react")).default,
     },
     rules: {
       "unused-imports/no-unused-imports": "error",
       "react/no-unescaped-entities": "error", // ✅ Now works in .tsx files
+      "react/react-in-jsx-scope": "off",
     },
     settings: {
       react: {

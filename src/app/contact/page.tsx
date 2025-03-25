@@ -17,12 +17,26 @@ export default function Contact() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // You could send the form data to an API here.
-    console.log(form);
-    setIsSubmitted(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        console.error('Failed to send contact message.');
+      }
+    } catch (err) {
+      console.error('Error:', err);
+    }
   };
+
 
   return (
     <main className="min-h-screen bg-brand-primary text-brand-text py-12">

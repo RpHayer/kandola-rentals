@@ -1,13 +1,9 @@
 'use client';
 
-import Image from 'next/image';
-import React, { useState } from 'react';
 import Link from 'next/link';
 import ImageCarousel from '../components/ImageCarousel';
 
 export default function TrailerDetails() {
-  const [isModalOpen, setModalOpen] = useState(false);
-
   return (
     <main className="min-h-screen bg-brand-primary text-brand-text py-12">
       <div className="container mx-auto px-4">
