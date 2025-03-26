@@ -8,17 +8,17 @@ export const metadata: Metadata = {
   description:
     "KAN PACIFIC EQUIPMENT LTD. is a family-run business in Langley, providing reliable equipment solutions for construction, waste disposal, and material handling. Founded by Binay and Gunvir Kandola, our commitment to hard work and honesty drives exceptional service.",
   icons: {
-    icon: '/favicon.ico',  // This points to public/favicon.ico
+    icon: '/favicon.ico',
   },
   openGraph: {
     title: "KAN PACIFIC EQUIPMENT LTD. | Reliable Equipment Solutions",
     description:
       "Family-run equipment solutions for construction, waste disposal, and material handling in Langley.",
-    url: "https://www.kanpacificequip.com", // Update with your domain
+    url: "https://www.kanpacificequip.com",
     siteName: "KAN PACIFIC EQUIPMENT LTD.",
     images: [
       {
-        url: "https://www.kanpacificequip.com/favicon-32x32.png", // Update with your Open Graph image path
+        url: "https://www.kanpacificequip.com/logos/kk.png",
         width: 800,
         height: 600,
         alt: "KAN PACIFIC Equipment",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "KAN PACIFIC EQUIPMENT LTD. | Reliable Equipment Solutions",
     description:
       "Family-run equipment solutions for construction, waste disposal, and material handling in Langley.",
-    images: ["https://www.kanpacificequip.com/favicon-32x32.png"], // Update with your image path
+    images: ["https://www.kanpacificequip.com/logos/kk.png"],
   },
 
 };
