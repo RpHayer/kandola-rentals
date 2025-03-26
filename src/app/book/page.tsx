@@ -62,7 +62,7 @@ export default function Book() {
   };
 
   return (
-    <main className="min-h-screen bg-brand-primary text-brand-text py-12">
+    <main className="min-h-screen bg-brand-primary text-brand-text py-12 scroll-mt-[72px]">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold uppercase text-center mb-8">
           Rental Booking Request

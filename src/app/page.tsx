@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="bg-brand-primary text-brand-text">
+    <main className="bg-brand-primary text-brand-text scroll-mt-[72px]">
       <Hero />
 
       {/* Call to Action Section */}
