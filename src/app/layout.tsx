@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://www.kanpacificequip.com/images/k.jpg",
-        width: 800,
-        height: 600,
+        width: 88,
+        height: 107,
         alt: "KAN PACIFIC Equipment",
       },
     ],
