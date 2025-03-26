@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     siteName: "KAN PACIFIC EQUIPMENT LTD.",
     images: [
       {
-        url: "https://www.kanpacificequip.com/images/k.jpg",
-        width: 88,
-        height: 107,
+        url: "https://www.kanpacificequip.com/images/og-image.png",
+        width: 1200,
+        height: 630,
         alt: "KAN PACIFIC Equipment",
       },
     ],
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "KAN PACIFIC EQUIPMENT LTD. | Reliable Equipment Solutions",
     description:
       "Family-run equipment solutions for construction, waste disposal, and material handling in Langley.",
-    images: ["https://www.kanpacificequip.com/images/k.jpg"],
+    images: ["https://www.kanpacificequip.com/images/og-image.png"],
   },
 
 };
