@@ -5,7 +5,7 @@ import ImageCarousel from '../components/ImageCarousel';
 
 export default function TrailerDetails() {
   return (
-    <main className="min-h-screen bg-brand-primary text-brand-text py-12">
+    <main className="min-h-screen bg-brand-primary text-brand-text py-12 scroll-mt-[72px]">
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <header className="text-center mb-12">
