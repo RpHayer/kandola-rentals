@@ -14,11 +14,11 @@ export const metadata: Metadata = {
     title: "KAN PACIFIC EQUIPMENT LTD. | Reliable Equipment Solutions",
     description:
       "Family-run equipment solutions for construction, waste disposal, and material handling in Langley.",
-    url: "https://yourdomain.com", // Update with your domain
+    url: "https://www.kanpacificequip.com", // Update with your domain
     siteName: "KAN PACIFIC EQUIPMENT LTD.",
     images: [
       {
-        url: "https://yourdomain.com/images/og-image.jpg", // Update with your Open Graph image path
+        url: "https://www.kanpacificequip.com/logos/k.png", // Update with your Open Graph image path
         width: 800,
         height: 600,
         alt: "KAN PACIFIC Equipment",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "KAN PACIFIC EQUIPMENT LTD. | Reliable Equipment Solutions",
     description:
       "Family-run equipment solutions for construction, waste disposal, and material handling in Langley.",
-    images: ["https://yourdomain.com/images/og-image.jpg"], // Update with your image path
+    images: ["https://www.kanpacificequip.com/logos/k.png"], // Update with your image path
   },
 
 };
