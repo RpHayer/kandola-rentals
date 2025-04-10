@@ -38,10 +38,35 @@ export default function TrailerDetails() {
 
         {/* Bottom Section: Specifications Table & Key Features */}
         <div className="flex flex-col md:flex-row md:space-x-8">
-          {/* Left Column: Specifications Table */}
+          {/* Left Column: Key Features */}
           <div className="md:w-1/2 mb-8 md:mb-0">
             <div className="p-6 bg-brand-secondary rounded-xl shadow-md">
-              <h2 className="text-2xl font-bold uppercase mb-6">Key Features</h2>
+              {/* Rental Pricing Section */}
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold uppercase mb-4">Rental Pricing</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-base">
+                  <div className="flex justify-between border-b border-gray-500 pb-2">
+                    <span className="font-medium">Daily (24 hrs)</span>
+                    <span className="text-md font-semibold text-right">$140</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-500 pb-2">
+                    <span className="font-medium">Weekend (Fri–Sun)</span>
+                    <span className="text-md font-semibold text-right">$350</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-500 pb-2">
+                    <span className="font-medium">Weekly</span>
+                    <span className="text-md font-semibold text-right">$750</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-500 pb-2">
+                    <span className="font-medium">Long-Term (7+ days)</span>
+                    <Link
+                      href="/book">
+                      <span className="text-md font-semibold text-right text-brand-accent">Contact Us</span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <h2 className="text-2xl font-bold uppercase mb-4">Key Features</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {/* Feature Card 1 */}
                 <div className="p-4 bg-white bg-opacity-10 rounded-xl shadow-sm flex items-start space-x-4">
@@ -112,7 +137,7 @@ export default function TrailerDetails() {
               </div>
             </div>
           </div>
-          {/* Right Column: Key Features */}
+          {/* Right Column: Specifications Tables */}
           <div className="md:w-1/2">
             <div className="overflow-x-auto">
               <table className="w-full bg-brand-secondary rounded-xl shadow-md">
